@@ -13,10 +13,6 @@ const List =({places, childClicked,isLoading, type, setType, rating, setRating})
       setElRefs((refs) => Array(places.length).fill().map((_, i) => refs[i] || createRef()));
     }, [places]);
 
-    // useEffect(()=>{
-    //     const refs=Array(places?.length).fill().map((_, i)=> elRefs[i] || createRef());
-    //     setElRefs(refs);
-    // },[places]);  
     return (
         <div className={classes.container}>
             <Typography variant="h4">Food & Dining around you</Typography>

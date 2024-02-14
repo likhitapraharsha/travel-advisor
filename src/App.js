@@ -20,18 +20,7 @@ navigator.geolocation.getCurrentPosition(({coords: {latitude, longitude}})=>{
 })
 },[]);
 
-// useEffect(() => {
-//     if (bounds) { // Check if bounds is not null before calling getPlacesData
-//         getPlacesData(bounds.sw, bounds.ne)
-//             .then((data) => {
-//                 console.log(data);
-//                 setPlaces(data);
-//             })
-//             .catch(error => {
-//                 console.error('Error fetching data:', error);
-//             });
-//     }
-// }, [bounds]);
+
     useEffect(()=>{
         const filteredPlaces=places.filter((place)=> Number(place.rating)>rating);
         setFilteredPlaces(filteredPlaces);
